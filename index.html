@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="shortcut icon" href="./assets/cl-logo-header.png" type="image/x-icon">
     <title>Partner Cleaning</title>
 </head>
@@ -18,8 +18,10 @@
             <span>📞 +998 90 134 77 88</span>
         </div>
         <div class="top-icons ">
-            <a target="_blank" href="https://www.instagram.com/farhod__ismailov/"> <img src="./icons/instagram (1).png" alt="" width="20"></a>
-            <a target="_blank" href="https://t.me/toshkentbekabodtaxiii"><img src="./icons/telegram (2).png" alt="" width="20"></a>
+            <a target="_blank" href="https://www.instagram.com/farhod__ismailov/"> <img src="./icons/instagram (1).png"
+                    alt="" width="20"></a>
+            <a target="_blank" href="https://t.me/toshkentbekabodtaxiii"><img src="./icons/telegram (2).png" alt=""
+                    width="20"></a>
         </div>
     </div>
 
@@ -42,7 +44,7 @@
 
     <div class="hero">
         <div class="hero-bg"></div>
-        <div class="hero-content">
+        <div class="hero-content" data-aos="fade-up" data-aos-offset="500" data-aos-easing="ease-in-sine">
             <h1 class="hero-title">Профессиональная<br>Уборка Помещений</h1>
             <p class="hero-subtitle">Мы стараемся сделать качественную уборку и уложиться в один день по времени.</p>
             <div class="hero-buttons">
@@ -54,7 +56,7 @@
     <!-- ------------------------------------ABOUT-SECTION--------------------------------- -->
     <section id="about-section" class="about-section">
         <div class="about-content">
-            <div class="about-text">
+            <div class="about-text" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
                 <div class="about-subtitle">О КОМПАНИИ</div>
                 <h2 class="about-title">Клиенты Доверяют Нам С 2025 Года.</h2>
                 <p class="about-description">
@@ -70,7 +72,7 @@
                 </p>
             </div>
 
-            <div class="about-numbers">
+            <div class="about-numbers" data-aos="fade-up" data-aos-offset="500" data-aos-easing="ease-in-sine">
                 <div class="about-number-item">
                     <svg class="about-number-icon" viewBox="0 0 24 24">
                         <path
@@ -104,10 +106,9 @@
                     <div class="about-number-label">Многолетний Опыт Работы</div>
                 </div>
             </div>
-
         </div>
 
-        <div class="about-image-wrapper">
+        <div class="about-image-wrapper" data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine">
             <img src="./assets/about-pic.jpg" alt="Cleaning Service" class="about-image">
             <div class="experience-frame">
                 <div class="experience-number">5</div>
@@ -244,7 +245,6 @@
     </section>
 
     <!-- ------------------------------------------PORTFULIO-------------------------------- -->
-
 
     <section id="portfolio-section" class="portfolio-section">
         <div class="container">
@@ -596,8 +596,12 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
     <script src="index.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>

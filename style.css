@@ -1691,6 +1691,7 @@ html {
     }
 
     .navbar {
+        width: 100%;
         flex-direction: column;
         padding: 10px 20px;
         justify-content: center;
