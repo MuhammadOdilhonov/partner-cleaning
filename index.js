@@ -1,3 +1,38 @@
+const headerNav = document.querySelector('.navbar');
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        // Scroll behavior
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                headerNav.classList.add('scrolled');
+            } else {
+                headerNav.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!headerNav.contains(event.target) && navLinks.classList.contains('active')) {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+
 const topBar = document.querySelector('.top-bar');
 const navbar = document.querySelector('.navbar');
 let lastScrollTop = 0;

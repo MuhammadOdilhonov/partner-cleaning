@@ -29,6 +29,11 @@
         <a href="#" class="logo">
             <img src="./assets/cl-logo1.png" alt="Logo">
         </a>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul class="nav-links">
             <li><a class="nav-link" href="/">Главная</a></li>
             <li><a class="nav-link" href="#about-section">О Нас</a></li>
@@ -40,6 +45,7 @@
             <li><a class="nav-link" href="#contacts-section">Контакты</a></li>
             <li><a class="nav-link" href="#">Uz</a></li>
         </ul>
+        
     </nav>
 
     <div class="hero">
@@ -56,7 +62,7 @@
     <!-- ------------------------------------ABOUT-SECTION--------------------------------- -->
     <section id="about-section" class="about-section">
         <div class="about-content">
-            <div class="about-text" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
+            <div class="about-text" data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine">
                 <div class="about-subtitle">О КОМПАНИИ</div>
                 <h2 class="about-title">Клиенты Доверяют Нам С 2025 Года.</h2>
                 <p class="about-description">
@@ -72,7 +78,7 @@
                 </p>
             </div>
 
-            <div class="about-numbers" data-aos="fade-up" data-aos-offset="500" data-aos-easing="ease-in-sine">
+            <div class="about-numbers" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <div class="about-number-item">
                     <svg class="about-number-icon" viewBox="0 0 24 24">
                         <path
@@ -108,13 +114,12 @@
             </div>
         </div>
 
-        <div class="about-image-wrapper" data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine">
+        <div class="about-image-wrapper" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
             <img src="./assets/about-pic.jpg" alt="Cleaning Service" class="about-image">
             <div class="experience-frame">
                 <div class="experience-number">5</div>
                 <div class="experience-text">Годы Опыта</div>
             </div>
-            <a href="https://www.youtube.com/watch?v=your-video-id" class="play-button" target="_blank"></a>
         </div>
     </section>
     <!-- ---------------------------------------SERVICE-SECTION------------------------------- -->
@@ -122,15 +127,15 @@
         <div class="container">
             <div class="section-label">Услуги</div>
 
-            <h1 class="section-title">Клининговые Услуги</h1>
-            <p class="section-subtitle">
+            <h1 data-aos="fade-right" class="section-title">Клининговые Услуги</h1>
+            <p data-aos="fade-left" class="section-subtitle">
                 Профессиональная Уборка – Это Отличные Результаты, Независимо От Объема И Только Приятные Впечатления От
                 Работы Добросовестных И Тактичных Сотрудников «Aqua-Cleaning»
             </p>
 
             <div class="services-grid">
                 <!-- 1-Card -->
-                <div class="service-card">
+                <div data-aos="fade-right" data-aos="fade-right" class="service-card">
                     <div class="card-front">
                         <img class="service-icon" src="./icons/house-cleaning.png" alt="">
                         <h3 class="service-title">Очистка Фасадов</h3>
@@ -145,7 +150,7 @@
                 </div>
 
                 <!-- 2-Card -->
-                <div class="service-card">
+                <div data-aos="fade-down" class="service-card">
                     <div class="card-front">
                         <img class="service-icon" src="./icons/house-cleaning.png" alt="">
                         <h3 class="service-title">Уборка</h3>
@@ -169,7 +174,7 @@
                 </div>
 
                 <!-- 3-Card -->
-                <div class="service-card">
+                <div data-aos="fade-left" class="service-card">
                     <div class="card-front">
                         <img class="service-icon" src="./icons/house-cleaning.png" alt="">
                         <h3 class="service-title">Очистка Стекол</h3>
@@ -183,7 +188,7 @@
                 </div>
 
                 <!-- 4-Card -->
-                <div class="service-card">
+                <div data-aos="fade-right" class="service-card">
                     <div class="card-front">
                         <img class="service-icon" src="./icons/house-cleaning.png" alt="">
                         <h3 class="service-title">Чистка Брусчатки</h3>
@@ -205,7 +210,7 @@
                 </div>
 
                 <!-- 5-Card -->
-                <div class="service-card">
+                <div data-aos="fade-up" class="service-card">
                     <div class="card-front">
                         <img class="service-icon" src="./icons/house-cleaning.png" alt="">
                         <h3 class="service-title">Мойка Стеклянных Зданий</h3>
@@ -225,7 +230,7 @@
                 </div>
 
                 <!-- 6-Card -->
-                <div class="service-card">
+                <div data-aos="fade-left" class="service-card">
                     <div class="card-front">
                         <img class="service-icon" src="./icons/house-cleaning.png" alt="">
                         <h3 class="service-title">Чистка Мебели</h3>
@@ -250,10 +255,10 @@
         <div class="container">
             <!-- Portfolio sarlavhasi -->
             <div class="portfolio-label">Портфолио</div>
-            <h2 class="portfolio-title">Портфолио</h2>
+            <h2 data-aos="fade-right" class="portfolio-title">Портфолио</h2>
 
             <!-- Slider -->
-            <div class="slider-container">
+            <div data-aos="zoom-out-down" class="slider-container">
                 <div class="slider">
                     <!-- 1-slayd -->
                     <div class="slide">
@@ -301,12 +306,12 @@
 
     <section id="reviews-section" class="reviews-section">
         <div class="container">
-            <div class="reviews-label">Отзывы</div>
-            <h2 class="reviews-title">Отзывы Клиентов О Нас</h2>
+            <div data-aos="zoom-in-up" class="reviews-label">Отзывы</div>
+            <h2 data-aos="zoom-in-up" class="reviews-title">Отзывы Клиентов О Нас</h2>
 
             <div class="reviews-grid">
                 <!-- 1-otzyv -->
-                <div class="review-card">
+                <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" class="review-card">
                     <div class="user-info">
                         <div class="user-avatar">
                             <img src="./icons/user.png" alt="">
@@ -332,7 +337,7 @@
                 </div>
 
                 <!-- 2-otzyv -->
-                <div class="review-card">
+                <div data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine" class="review-card">
                     <div class="user-info">
                         <div class="user-avatar">
                             <img src="./icons/user.png" alt="">
@@ -357,7 +362,7 @@
                 </div>
 
                 <!-- 3-otzyv -->
-                <div class="review-card">
+                <div data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" class="review-card">
                     <div class="user-info">
                         <div class="user-avatar">
                             <img src="./icons/user.png" alt="">
@@ -390,7 +395,7 @@
     <section class="acardions-section">
         <div class="container">
             <!-- Sarlavha qismi -->
-            <div class="accordion-header">
+            <div data-aos="fade-up" class="accordion-header">
                 <div class="accordion-subtitle-wrapper">
                     <div class="accordion-line"></div>
                     <div class="accordion-subtitle">FAQS</div>
@@ -400,7 +405,7 @@
             </div>
 
             <!-- Akkordeon qismi -->
-            <div class="accordion-list">
+            <div data-aos="fade-up" class="accordion-list">
                 <!-- Birinchi qator -->
                 <div class="accordion-row">
                     <!-- Accordion Item 1 -->
@@ -448,9 +453,9 @@
 
     <section id="contacts-section" class="contacts-section">
         <div class="container">
-            <div class="contacts-content">
+            <div data-aos="fade-right" class="contacts-content">
                 <!-- Chap panel - Kontakt ma'lumotlari -->
-                <div class="contacts-info">
+                <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" class="contacts-info">
                     <!-- Manzil -->
                     <div class="contacts-item">
                         <div class="contacts-icon">
@@ -496,7 +501,7 @@
                 </div>
 
                 <!-- O'ng panel - Forma -->
-                <div class="contacts-form">
+                <div data-aos="fade-left" data-aos-offset="400" data-aos-easing="ease-in-sine" class="contacts-form">
                     <h2 class="contacts-title">Обратная Связь</h2>
                     <p class="contacts-subtitle">Мы Ответим На Ваши Вопросы Как Можно Скорее</p>
 
@@ -539,19 +544,21 @@
             <div class="footer-content">
                 <!-- Footer Left -->
                 <div class="footer-left">
-                    <div class="footer-logo">
+                    <div data-aos="fade-up" class="footer-logo">
                         <img src="./assets/cl-logo1.png" alt="Partner Cleaning Logo">
                     </div>
-                    <p class="footer-description">
+                    <p data-aos="fade-right" class="footer-description">
                         Клининговое компания «Partner Cleaning» уже не первый год активно предоставляет услуги по
                         различным
                         видам уборки жилых и коммерческих помещений и территорий.
                     </p>
                     <div class="footer-social">
-                        <a target="_blank" href="https://www.instagram.com/farhod__ismailov/" class="social-icon">
+                        <a target="_blank" href="https://www.instagram.com/farhod__ismailov/" data-aos="fade-up"
+                            data-aos-offset="100" data-aos-easing="ease-in-sine" class="social-icon">
                             <img src="./icons/instagram (1).png" alt="Instagram">
                         </a>
-                        <a target="_blank" href="https://t.me/toshkentbekabodtaxiii" class="social-icon">
+                        <a target="_blank" href="https://t.me/toshkentbekabodtaxiii" data-aos="fade-up"
+                            data-aos-offset="50" data-aos-easing="ease-in-sine" class="social-icon">
                             <img src="./icons/telegram (2).png" alt="Telegram">
                         </a>
                     </div>
@@ -559,9 +566,9 @@
 
                 <!-- Footer Right -->
                 <div class="footer-right">
-                    <h3 class="footer-title">Контактная Информация</h3>
+                    <h3 data-aos="fade-down" class="footer-title">Контактная Информация</h3>
                     <div class="footer-box">
-                        <div class="footer-contacts">
+                        <div data-aos="fade-left" class="footer-contacts">
                             <a href="mailto:aquacleaning2023@gmail.com" class="footer-contact-item">
                                 <img src="./icons/sms.png" alt="Email">
                                 aquacleaning2023@gmail.com
@@ -579,7 +586,7 @@
                                 +998 99 890 98 94
                             </a>
                         </div>
-                        <div class="footer-map">
+                        <div class="footer-map" data-aos="fade-up">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9807.37386214955!2d69.23709231915741!3d41.30886407082374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b07e972a36f%3A0xa2de9aed6acdc711!2z0JTQstC-0YDQtdGGINCU0YDRg9C20LHRiyDQndCw0YDQvtC00L7Qsg!5e0!3m2!1sru!2s!4v1739203930943!5m2!1sru!2s"
                                 width="400" height="240" style="border:0;" allowfullscreen="" loading="lazy"
