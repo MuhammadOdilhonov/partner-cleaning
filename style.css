@@ -14,10 +14,35 @@
 
 body {
     font-family: Arial, sans-serif;
-    padding-top: 100px;
     width: 100%;
+    overflow-x: hidden;
     /* Adjust this value based on your top-bar and navbar heights */
 }
+
+
+/* Scroll umumiy o'lchami */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Scroll yo'lagi */
+::-webkit-scrollbar-track {
+    background: #fff;
+}
+
+/* Scrollni harakatlantiradigan qismi */
+::-webkit-scrollbar-thumb {
+    background: #00b8e6;
+    border-radius: 10px;
+    border: 2px solid darkblue;
+}
+
+/* Scroll bosilganda */
+::-webkit-scrollbar-thumb:hover {
+    background: darkblue;
+}
+
+
 
 .top-bar {
     display: flex;
@@ -86,12 +111,7 @@ body {
     border-bottom: 3px solid white;
 }
 
-.hero {
-    top: -60px;
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-}
+
 
 /* Mobil menyu tugmasi */
 .menu-toggle {
@@ -112,104 +132,104 @@ body {
 
 /* Mobil va planshet versiyasi */
 
-
-.hero-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/cl1.jpg');
-    background-size: cover;
-    background-position: center;
-    animation: bgChange 25s infinite;
-    filter: brightness(0.7);
-}
-
-@keyframes bgChange {
-
-    0%,
-    100% {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/cl1.jpg');
-    }
-
-    20% {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/cl2.jpg');
-    }
-
-    40% {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/cl3.jpg');
-    }
-
-    60% {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/cl4.jpg');
-    }
-
-    80% {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/cl5.jpg');
-    }
-}
-
-.hero-content {
+.scroll-container {
+    height: 500vh;
     position: relative;
-    z-index: 1;
-    height: 100%;
+}
+
+/* Har bir panel bir xil ko‘rinishda bo‘ladi */
+.panel {
+    position: sticky;
+    top: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     text-align: center;
-    padding: 0 20px;
+    padding: 20px;
+    color: #fff;
 }
 
-.hero-title {
-    font-size: 80px;
+/* Panel ichidagi matn elementlari */
+.panel-title {
+    font-size: 3rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero-subtitle {
+.panel-subtitle {
     font-size: 1.5rem;
     margin-bottom: 30px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.hero-buttons {
+.panel-buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
-.hero-button {
+.panel-button,
+.panel-button2 {
     padding: 15px 40px;
     font-size: 1.2rem;
     color: white;
-    background-color: #00b8e6;
-    border: 3px solid darkblue;
     border-radius: 30px;
-    cursor: pointer;
     text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s, border 0.3s;
 }
 
-.hero-button:hover {
+/* Birinchi tugma: to‘liq rangli */
+.panel-button {
+    background-color: #00b8e6;
     border: 3px solid darkblue;
+}
+
+.panel-button:hover {
     background: none;
 }
 
-.hero-button2 {
-    padding: 15px 40px;
-    font-size: 1.2rem;
-    color: white;
+/* Ikkinchi tugma: avval chekka, hoverda to‘liq rangli */
+.panel-button2 {
+    background: none;
     border: 3px solid #00b8e6;
-    border-radius: 30px;
-    cursor: pointer;
-    text-decoration: none;
 }
 
-.hero-button2:hover {
-    border: 3px solid #00b8e6;
+.panel-button2:hover {
     background: #00b8e6;
 }
+
+/* Har bir panel uchun alohida fon rasmi va z-index qiymatlari */
+.panel-1 {
+    z-index: 1;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/cl1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.panel-2 {
+    z-index: 2;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/cl2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.panel-3 {
+    z-index: 3;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/cl3.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.panel-4 {
+    z-index: 4;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./assets/cl4.webp');
+    background-size: cover;
+    background-position: center;
+}
+
 
 .content {
     min-height: 1000px;
@@ -381,7 +401,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    
+
 }
 
 .about-number-item {
@@ -516,24 +536,16 @@ body {
         content: "0";
     }
 
-    20% {
+    30% {
         content: "1";
     }
 
-    40% {
+    70% {
         content: "2";
     }
 
-    60% {
-        content: "3";
-    }
-
-    80% {
-        content: "4";
-    }
-
     100% {
-        content: "5";
+        content: "3";
     }
 }
 
@@ -628,7 +640,7 @@ body {
     height: 300px;
     transform-style: preserve-3d;
     cursor: pointer;
-    
+
 }
 
 /* Har bir card uchun kechikish */
@@ -1023,11 +1035,12 @@ body {
 
 /* --------------------------------------------Acardions-------------------------------------- */
 
-.acardions-section{
- padding: 50px;
- margin-top: 20px;
- margin-bottom: 80px;
+.acardions-section {
+    padding: 50px;
+    margin-top: 20px;
+    margin-bottom: 80px;
 }
+
 /* Sarlavha stillar */
 .accordion-header {
     margin-bottom: 60px;
@@ -1483,25 +1496,25 @@ html {
         text-align: center;
     }
 
-        .navbar {
-            padding: 10px 20px;
-            flex-wrap: wrap;
-        }
-    
-        .navbar-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-    
-   
+    .navbar {
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+
+    .navbar-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
 
 
 
-.contact-info{
-    display: none;
-}
+
+
+    .contact-info {
+        display: none;
+    }
 
 
 
@@ -1564,22 +1577,19 @@ html {
     }
 
     /* Hero bo'limi */
-    .hero {
-        height: 600px;
-    }
-
-    .hero-title {
+    .panel-title {
         font-size: 2rem;
-        /* taxminan 40px */
+        /* Sarlavha kichraytirilgan */
     }
 
-    .hero-subtitle {
-        font-size: 1.2rem;
+    .panel-subtitle {
+        font-size: 1rem;
     }
 
-    .hero-buttons {
-        flex-direction: column;
-        gap: 10px;
+    .panel-button,
+    .panel-button2 {
+        padding: 10px 20px;
+        font-size: 1rem;
     }
 
     /* About bo'limi */
@@ -1647,7 +1657,7 @@ html {
 
     /* Portfolio bo'limi */
     .portfolio-section {
-        padding: 20px;
+        box-sizing: border-box;
     }
 
     .portfolio-title {
@@ -1661,6 +1671,22 @@ html {
 
     .slide-caption {
         font-size: 20px;
+    }
+
+    .slider-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 30px;
+        height: 30px;
+        background-color: #00b8e6;
+        border: none;
+        border-radius: 50%;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        z-index: 10;
     }
 
     /* Reviews bo'limi */
@@ -1725,265 +1751,265 @@ html {
     }
 
     /* Contacts bo'limi */
-        .contacts-section {
-            background-color: #fff;
-            padding: 40px 20px;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
-    
-        .contacts-section .container {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 0 10px;
-        }
-    
-        /* Kontent: Chap (Kontakt ma'lumotlari) va O'ng (Forma) panellari vertikal tarzda joylashadi */
-        .contacts-content {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-    
-        /* Chap panel: Kontakt ma'lumotlari */
-        .contacts-info {
-            background-color: #010B1C;
-            padding: 20px;
-            border-radius: 10px;
-            color: #fff;
-        }
-    
-        .contacts-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-    
-        .contacts-icon {
-            width: 40px;
-            height: 40px;
-            background-color: rgba(0, 184, 230, 0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 10px;
-        }
-    
-        .contacts-icon svg {
-            width: 24px;
-            height: 24px;
-            fill: #00B8E6;
-        }
-    
-        .contacts-text {
-            flex: 1;
-        }
-    
-        .contacts-label {
-            font-size: 14px;
-            color: #00B8E6;
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
-    
-        .contacts-value {
-            font-size: 16px;
-            color: #fff;
-        }
-    
-        /* O'ng panel: Kontakt formasi */
-        .contacts-form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            color: #333;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-    
-        .contacts-title {
-            font-size: 24px;
-            margin-bottom: 10px;
-            text-align: center;
-            color: #010B1C;
-        }
-    
-        .contacts-subtitle {
-            font-size: 14px;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #666;
-        }
-    
-        .contacts-box {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-    
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
-    
-        .form-label {
-            font-size: 14px;
-            color: #666;
-        }
-    
-        .form-input,
-        .form-textarea {
-            padding: 10px;
-            font-size: 14px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-    
-        .form-input:focus,
-        .form-textarea:focus {
-            border-color: #00B8E6;
-            outline: none;
-        }
-    
-        .form-textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-    
-        .submit-button {
-            padding: 10px;
-            font-size: 16px;
-            background-color: #00B8E6;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            width: 100%;
-        }
-    
-        .submit-button:hover {
-            background-color: #0095bd;
-        }
+    .contacts-section {
+        background-color: #fff;
+        padding: 40px 20px;
+        font-family: Arial, sans-serif;
+        color: #333;
+    }
+
+    .contacts-section .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    /* Kontent: Chap (Kontakt ma'lumotlari) va O'ng (Forma) panellari vertikal tarzda joylashadi */
+    .contacts-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Chap panel: Kontakt ma'lumotlari */
+    .contacts-info {
+        background-color: #010B1C;
+        padding: 20px;
+        border-radius: 10px;
+        color: #fff;
+    }
+
+    .contacts-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .contacts-icon {
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 184, 230, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    .contacts-icon svg {
+        width: 24px;
+        height: 24px;
+        fill: #00B8E6;
+    }
+
+    .contacts-text {
+        flex: 1;
+    }
+
+    .contacts-label {
+        font-size: 14px;
+        color: #00B8E6;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+
+    .contacts-value {
+        font-size: 16px;
+        color: #fff;
+    }
+
+    /* O'ng panel: Kontakt formasi */
+    .contacts-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        color: #333;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .contacts-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+        text-align: center;
+        color: #010B1C;
+    }
+
+    .contacts-subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #666;
+    }
+
+    .contacts-box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .form-label {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f5f5f5;
+        color: #333;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus {
+        border-color: #00B8E6;
+        outline: none;
+    }
+
+    .form-textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .submit-button {
+        padding: 10px;
+        font-size: 16px;
+        background-color: #00B8E6;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%;
+    }
+
+    .submit-button:hover {
+        background-color: #0095bd;
+    }
 
     /* Footer bo'limi */
-   .footer-section {
-       background-color: #010B1C;
-       color: #fff;
-       padding: 30px 20px;
-       font-family: Arial, sans-serif;
-   }
+    .footer-section {
+        background-color: #010B1C;
+        color: #fff;
+        padding: 30px 20px;
+        font-family: Arial, sans-serif;
+    }
 
-   .footer-section .container {
-       max-width: 100%;
-       margin: 0 auto;
-       padding: 0 10px;
-   }
+    .footer-section .container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
 
-   /* Footer kontenti: chap va o'ng panellar vertikal tarzda */
-   .footer-content {
-       display: flex;
-       flex-direction: column;
-       gap: 20px;
-       align-items: center;
-       text-align: center;
-   }
+    /* Footer kontenti: chap va o'ng panellar vertikal tarzda */
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
 
-   /* Footer Left - Logo, tavsif va ijtimoiy tarmoqlar */
-   .footer-left {
-       width: 100%;
-   }
+    /* Footer Left - Logo, tavsif va ijtimoiy tarmoqlar */
+    .footer-left {
+        width: 100%;
+    }
 
-   .footer-logo img {
-       max-width: 150px;
-       margin: 0 auto 10px;
-       display: block;
-   }
+    .footer-logo img {
+        max-width: 150px;
+        margin: 0 auto 10px;
+        display: block;
+    }
 
-   .footer-description {
-       font-size: 14px;
-       line-height: 1.5;
-       margin-bottom: 15px;
-       padding: 0 10px;
-   }
+    .footer-description {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+        padding: 0 10px;
+    }
 
-   .footer-social {
-       display: flex;
-       justify-content: center;
-       gap: 10px;
-       margin-bottom: 20px;
-   }
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
 
-   .footer-social .social-icon {
-       display: inline-block;
-       width: 40px;
-       height: 40px;
-   }
+    .footer-social .social-icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+    }
 
-   .footer-social .social-icon img {
-       width: 100%;
-       height: auto;
-   }
+    .footer-social .social-icon img {
+        width: 100%;
+        height: auto;
+    }
 
-   /* Footer Right - Kontakt ma'lumotlari va xarita */
-   .footer-right {
-       width: 100%;
-       text-align: center;
-   }
+    /* Footer Right - Kontakt ma'lumotlari va xarita */
+    .footer-right {
+        width: 100%;
+        text-align: center;
+    }
 
-   .footer-title {
-       font-size: 20px;
-       margin-bottom: 10px;
-   }
+    .footer-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
 
-   .footer-box {
-       display: flex;
-       flex-direction: column;
-       gap: 15px;
-       align-items: center;
-   }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
 
-   .footer-contacts {
-       display: flex;
-       flex-direction: column;
-       gap: 10px;
-       width: 100%;
-   }
+    .footer-contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
 
-   .footer-contact-item {
-       font-size: 14px;
-       display: flex;
-       align-items: center;
-       gap: 8px;
-       justify-content: center;
-   }
+    .footer-contact-item {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: center;
+    }
 
-   .footer-contact-item img {
-       width: 20px;
-       height: 20px;
-   }
+    .footer-contact-item img {
+        width: 20px;
+        height: 20px;
+    }
 
-   .footer-map {
-       margin-top: 15px;
-   }
+    .footer-map {
+        margin-top: 15px;
+    }
 
-   .footer-map iframe {
-       width: 100%;
-       height: 200px;
-       border: 0;
-       border-radius: 10px;
-   }
+    .footer-map iframe {
+        width: 100%;
+        height: 200px;
+        border: 0;
+        border-radius: 10px;
+    }
 
-   /* Footer Bottom */
-   .footer-bottom {
-       text-align: center;
-       margin-top: 20px;
-       font-size: 12px;
-       border-top: 1px solid rgba(255, 255, 255, 0.2);
-       padding-top: 10px;
-   }
+    /* Footer Bottom */
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 10px;
+    }
 }
