@@ -204,21 +204,21 @@ body {
 /* Har bir panel uchun alohida fon rasmi va z-index qiymatlari */
 .panel-1 {
     z-index: 1;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./assets/cl1.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://rooki-profi.ru/thumb/2/21jUH5xFSdKmYWQsdVf6PQ/1000r/d/mojka_shtangoj_v_anapa.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .panel-2 {
     z-index: 2;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./assets/cl2.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('https://belosnezhka-nvkz.ru/wp-content/uploads/2017/06/moika-fasadov-usluga-870x500.jpg');
     background-size: cover;
     background-position: center;
 }
 
 .panel-3 {
     z-index: 3;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./assets/cl3.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./assets/cl3.jpg');
     background-size: cover;
     background-position: center;
 }
