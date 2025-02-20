@@ -1515,7 +1515,8 @@ html {
 
 
 
-    .contact-info .contact-info-location, .contact-info-email {
+    .contact-info .contact-info-location,
+    .contact-info-email {
         display: none;
     }
 
