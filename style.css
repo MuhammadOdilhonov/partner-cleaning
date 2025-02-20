@@ -1492,8 +1492,11 @@ html {
     /* Yuqori panel va navigatsiya */
     .top-bar {
         padding: 10px 20px;
-        flex-direction: column;
         text-align: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
     }
 
     .navbar {
@@ -1512,10 +1515,9 @@ html {
 
 
 
-    .contact-info {
+    .contact-info .contact-info-location, .contact-info-email {
         display: none;
     }
-
 
 
     .menu-toggle {
