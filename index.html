@@ -30,49 +30,50 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
-    <!-- Google tag (gtag.js) --> <amp-analytics type="gtag" data-credentials="include">
-        <script
-            type="application/json"> { "vars": { "gtag_id": "AW-16848530076", "config": { "AW-16848530076": { "groups": "default" } } }, "triggers": { } } </script>
-    </amp-analytics>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16848530076"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'AW-16848530076');
+    </script>
 
-    <!-- Google tag (gtag.js) --> <amp-analytics type="gtag" data-credentials="include">
-        <script type="application/json"> { 
-        "vars": { 
-            "gtag_id": "AW-16848530076", 
-            "config": { 
-                "AW-16848530076": { 
-                    "groups": "default" 
-                } 
-            } 
-        }, 
-        "triggers": { 
-            "C_7fyFHC7mAHk": { 
-                "on": "click", 
-                "selector": ".panel-button, tel-onclik", 
-                "vars": { 
-                    "event_name": "conversion", 
-                    "send_to": ["AW-16848530076/9MCpCPTXt6oaEJzVgOI-"] 
-                } 
-            } 
-        } 
-    } </script>
-    </amp-analytics>
+    <!-- Event snippet for Контакт conversion page -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16848530076/9MCpCPTXt6oaEJzVgOI-',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
 </head>
-
 
 <body>
     <div class="top-bar">
         <div class="contact-info">
             <span class="contact-info-location">📍 г.Ташкент</span>
             <span class="contact-info-email">📧 dochi7788@gmail.com</span>
-            <a href="tel:+998901347788" class="footer-contact-item tel-onclik"><span>📞 +998 90 134 77 88</span></a>
+            <a href="tel:+998901347788" class="footer-contact-item tel-onclik"
+                onclick="return gtag_report_conversion('tel:+998901347788');">
+                <span>📞 +998 90 134 77 88</span>
+            </a>
             <span>24/7</span>
         </div>
-        <div class="top-icons ">
-            <a target="_blank" href="https://www.instagram.com/farhod__ismailov/"> <img src="./icons/instagram (1).png"
-                    alt="" width="20"></a>
-            <a target="_blank" href="https://t.me/fasad_moyka7788"><img src="./icons/telegram (2).png" alt=""
-                    width="20"></a>
+        <div class="top-icons">
+            <a target="_blank" href="https://www.instagram.com/farhod__ismailov/">
+                <img src="./icons/instagram (1).png" alt="Instagram" width="20">
+            </a>
+            <a target="_blank" href="https://t.me/fasad_moyka7788">
+                <img src="./icons/telegram (2).png" alt="Telegram" width="20">
+            </a>
         </div>
     </div>
 
@@ -89,23 +90,22 @@
             <li><a class="nav-link" href="#portfolio-section">Портфолио</a></li>
             <li><a class="nav-link" href="#about-section">О Нас</a></li>
             <li><a class="nav-link" href="#services-section">Услуги</a></li>
-
             <li><a class="nav-link" href="#reviews-section">Отзывы</a></li>
             <li><a class="nav-link" href="#contacts-section">Вопросы</a></li>
             <li><a class="nav-link" href="#contacts-section">Контакты</a></li>
             <li><a class="nav-link" href="#">Uz</a></li>
         </ul>
-
     </nav>
-    <!-- ------------------------------------------Hero-------------------------------- -->
 
+    <!-- Hero Section -->
     <div class="scroll-container">
         <!-- Panel 1 -->
         <section class="panel panel-1">
             <h1 class="panel-title">Мойка Фасадов И Стеклянных Здании</h1>
             <p class="panel-subtitle">Мы стараемся сделать качественную уборку и уложиться в один день по времени.</p>
             <div class="panel-buttons">
-                <a href="tel:+998901347788" class="panel-button">Позвонить</a>
+                <a href="tel:+998901347788" class="panel-button"
+                    onclick="return gtag_report_conversion('tel:+998901347788');">Позвонить</a>
                 <a href="#contacts-section" class="panel-button2">Контакты</a>
             </div>
         </section>
@@ -114,10 +114,11 @@
         <section class="panel panel-2">
             <h1 class="panel-title">Мойка Фасадов</h1>
             <p class="panel-subtitle">Мы быстро и качественно очистим любые грязные окна и заставим их сиять, как
-                бриллианты, не оставляя разводов..</p>
+                бриллианты, не оставляя разводов.</p>
             <div class="panel-buttons">
-                <a href="tel:+998901111111" class="panel-button">Позвонить</a>
-                <a href="#services" class="panel-button2">Контакты</a>
+                <a href="tel:+998901347788" class="panel-button"
+                    onclick="return gtag_report_conversion('tel:+998901347788');">Позвонить</a>
+                <a href="#contacts-section" class="panel-button2">Контакты</a>
             </div>
         </section>
 
@@ -127,8 +128,9 @@
             <p class="panel-subtitle">Быстрая качественная чистка щеток и плитки во дворе и на рабочем месте, как если
                 бы они были новыми.</p>
             <div class="panel-buttons">
-                <a href="tel:+998902222222" class="panel-button">Позвонить</a>
-                <a href="#about-us" class="panel-button2">Контакты</a>
+                <a href="tel:+998901347788" class="panel-button"
+                    onclick="return gtag_report_conversion('tel:+998901347788');">Позвонить</a>
+                <a href="#contacts-section" class="panel-button2">Контакты</a>
             </div>
         </section>
 
@@ -136,22 +138,17 @@
         <section class="panel panel-4">
             <h1 class="panel-title">Быстрая Очистка Бассейна</h1>
             <p class="panel-subtitle">Мы профессионально очищаем бассейны, используя современные технологии и безопасные
-                моющие
-                средства. Гарантия качества!</p>
+                моющие средства. Гарантия качества!</p>
             <div class="panel-buttons">
-                <a href="tel:+998903333333" class="panel-button">Позвонить</a>
-                <a href="#faq" class="panel-button2">Контакты</a>
+                <a href="tel:+998901347788" class="panel-button"
+                    onclick="return gtag_report_conversion('tel:+998901347788');">Позвонить</a>
+                <a href="#contacts-section" class="panel-button2">Контакты</a>
             </div>
         </section>
-
-
-
     </div>
 
-    <!-- ------------------------------------------PORTFULIO-------------------------------- -->
-
+    <!-- Portfolio Section -->
     <section id="portfolio-section" class="portfolio-section">
-        <!-- Portfolio sarlavhasi -->
         <div class="portfolio-label">Портфолио</div>
         <h2 data-aos="fade-right" class="portfolio-title">Портфолио</h2>
 
@@ -220,11 +217,11 @@
                 </div>
             </div>
 
-            <!-- Slider tugmalari -->
+            <!-- Slider buttons -->
             <button class="slider-button prev-button">&#10094;</button>
             <button class="slider-button next-button">&#10095;</button>
 
-            <!-- Slider indikatorlari -->
+            <!-- Slider indicators -->
             <div class="slider-indicators">
                 <div class="indicator active"></div>
                 <div class="indicator"></div>
@@ -242,7 +239,7 @@
         </div>
     </section>
 
-    <!-- ------------------------------------ABOUT-SECTION--------------------------------- -->
+    <!-- About Section -->
     <section id="about-section" class="about-section">
         <div class="about-content">
             <div class="about-text" data-aos="fade-up" data-aos-offset="100" data-aos-easing="ease-in-sine">
@@ -305,7 +302,8 @@
             </div>
         </div>
     </section>
-    <!-- ---------------------------------------SERVICE-SECTION------------------------------- -->
+
+    <!-- Services Section -->
     <section id="services-section" class="services-section">
         <div class="container">
             <div class="section-label">Услуги</div>
@@ -318,9 +316,9 @@
 
             <div class="services-grid">
                 <!-- 1-Card -->
-                <div data-aos="fade-up" data-aos="fade-up" class="service-card">
+                <div data-aos="fade-up" class="service-card">
                     <div class="card-front">
-                        <img class="service-icon" src="./icons/house-cleaning.png" alt="">
+                        <img class="service-icon" src="./icons/house-cleaning.png" alt="Очистка Фасадов">
                         <h3 class="service-title">Очистка Фасадов</h3>
                         <p class="service-description">Мы проведем химическую и современную очистку фасадов ваших
                             рабочих мест и квартир.</p>
@@ -335,7 +333,7 @@
                 <!-- 2-Card -->
                 <div data-aos="fade-up" class="service-card">
                     <div class="card-front">
-                        <img class="service-icon" src="./icons/house-cleaning.png" alt="">
+                        <img class="service-icon" src="./icons/house-cleaning.png" alt="Уборка">
                         <h3 class="service-title">Уборка</h3>
                         <p class="service-description">Мы предлагаем все виды услуг по уборке для дома и офиса с опытным
                             персоналом быстро и качественно.</p>
@@ -343,15 +341,10 @@
                     <div class="card-back">
                         <h3 class="service-title">Уборка</h3>
                         <p class="service-description">Уборка частных домов<br>
-
                             Уборка офисов<br>
-
                             Уборка государственных зданий<br>
-
                             Коммерческая уборка<br>
-
                             Уборка ресторанов<br>
-
                             Уборка торговых помещений и магазинов.</p>
                     </div>
                 </div>
@@ -359,21 +352,21 @@
                 <!-- 3-Card -->
                 <div data-aos="fade-up" class="service-card">
                     <div class="card-front">
-                        <img class="service-icon" src="./icons/house-cleaning.png" alt="">
+                        <img class="service-icon" src="./icons/house-cleaning.png" alt="Очистка Стекол">
                         <h3 class="service-title">Очистка Стекол</h3>
                         <p class="service-description">Мы быстро и качественно очистим любые грязные окна и заставим их
                             сиять, как бриллианты, не оставляя разводов.</p>
                     </div>
                     <div class="card-back">
                         <h3 class="service-title">Очистка Стекол</h3>
-                        <p class="service-description">Мойка окон и фасадов, витражный зданий ,прилегающий.</p>
+                        <p class="service-description">Мойка окон и фасадов, витражный зданий, прилегающий.</p>
                     </div>
                 </div>
 
                 <!-- 4-Card -->
                 <div data-aos="fade-up" class="service-card">
                     <div class="card-front">
-                        <img class="service-icon" src="./icons/house-cleaning.png" alt="">
+                        <img class="service-icon" src="./icons/house-cleaning.png" alt="Чистка Брусчатки">
                         <h3 class="service-title">Чистка Брусчатки</h3>
                         <p class="service-description">Быстрая качественная чистка щеток и плитки во дворе и на рабочем
                             месте, как если бы они были новыми.</p>
@@ -381,13 +374,9 @@
                     <div class="card-back">
                         <h3 class="service-title">Чистка Брусчатки</h3>
                         <p class="service-description">Чистка тротуарной плитки<br>
-
                             Чистка травертина<br>
-
                             Чистка мрамора<br>
-
                             Чистка гранита<br>
-
                             После строительная мойка брусчкати.</p>
                     </div>
                 </div>
@@ -395,7 +384,7 @@
                 <!-- 5-Card -->
                 <div data-aos="fade-up" class="service-card">
                     <div class="card-front">
-                        <img class="service-icon" src="./icons/house-cleaning.png" alt="">
+                        <img class="service-icon" src="./icons/house-cleaning.png" alt="Мойка Стеклянных Зданий">
                         <h3 class="service-title">Мойка Стеклянных Зданий</h3>
                         <p class="service-description">Мы быстро и качественно очистим любые грязные окна и заставим их
                             сиять, как бриллианты, не оставляя разводов.</p>
@@ -403,11 +392,8 @@
                     <div class="card-back">
                         <h3 class="service-title">Мойка Стеклянных Зданий</h3>
                         <p class="service-description">Мойка остеклянных фасадов<br>
-
                             Мойка фасадов частных домов<br>
-
                             Мойка пластиковых фасадов<br>
-
                             Мойка рекламных банеров.</p>
                     </div>
                 </div>
@@ -415,16 +401,14 @@
                 <!-- 6-Card -->
                 <div data-aos="fade-up" class="service-card">
                     <div class="card-front">
-                        <img class="service-icon" src="./icons/house-cleaning.png" alt="">
+                        <img class="service-icon" src="./icons/house-cleaning.png" alt="Чистка Мебели">
                         <h3 class="service-title">Чистка Мебели</h3>
                         <p class="service-description">Услуги по чистке диванов и обивки мягкой мебели.</p>
                     </div>
                     <div class="card-back">
                         <h3 class="service-title">Чистка Мебели</h3>
                         <p class="service-description">Химчситка мягкой мебели<br>
-
                             Химчистка кресел<br>
-
                             Химчистка жалюзи.</p>
                     </div>
                 </div>
@@ -432,9 +416,7 @@
         </div>
     </section>
 
-
-    <!-- -----------------------------------------------REVIEW-------------------------------- -->
-
+    <!-- Reviews Section -->
     <section id="reviews-section" class="reviews-section">
         <div class="container">
             <div data-aos="zoom-in-up" class="reviews-label">Отзывы</div>
@@ -445,7 +427,7 @@
                 <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" class="review-card">
                     <div class="user-info">
                         <div class="user-avatar">
-                            <img src="./icons/user.png" alt="">
+                            <img src="./icons/user.png" alt="Аватар пользователя">
                         </div>
                         <div class="user-details">
                             <div class="user-name">Мадина</div>
@@ -461,8 +443,7 @@
                     </div>
                     <p class="review-text">
                         Спасибо компании Partner Cleaning за чистую квартиру. Уже не в первый раз к ним обращаюсь, так
-                        как
-                        в силу проблем со здоровьем, не могу убраться, как следует. Да и поговорить с ними приятно,
+                        как в силу проблем со здоровьем, не могу убраться, как следует. Да и поговорить с ними приятно,
                         вежливые, культурные.
                     </p>
                     <div class="quote-mark">„</div>
@@ -472,7 +453,7 @@
                 <div data-aos="fade-right" data-aos-offset="150" data-aos-easing="ease-in-sine" class="review-card">
                     <div class="user-info">
                         <div class="user-avatar">
-                            <img src="./icons/user.png" alt="">
+                            <img src="./icons/user.png" alt="Аватар пользователя">
                         </div>
                         <div class="user-details">
                             <div class="user-name">Елена</div>
@@ -497,7 +478,7 @@
                 <div data-aos="fade-right" data-aos-offset="100" data-aos-easing="ease-in-sine" class="review-card">
                     <div class="user-info">
                         <div class="user-avatar">
-                            <img src="./icons/user.png" alt="">
+                            <img src="./icons/user.png" alt="Аватар пользователя">
                         </div>
                         <div class="user-details">
                             <div class="user-name">Марат</div>
@@ -521,9 +502,7 @@
         </div>
     </section>
 
-
-    <!-- -------------------------------------------------------ACARDIONS------------------------------>
-
+    <!-- FAQ Section -->
     <section class="acardions-section">
         <div class="container">
             <!-- Sarlavha qismi -->
@@ -581,8 +560,8 @@
             </div>
         </div>
     </section>
-    <!-- --------------------------------------------------CONTACTS--------------------------------  -->
 
+    <!-- Contacts Section -->
     <section id="contacts-section" class="contacts-section">
         <div class="container">
             <div data-aos="fade-right" class="contacts-content">
@@ -612,8 +591,14 @@
                         </div>
                         <div class="contacts-text">
                             <div class="contacts-label">Номер Телефона</div>
-                            <div class="contacts-value tel-onclik">+998 90 134 77 88</div>
-                            <div class="contacts-value tel-onclik">+998 99 890 98 94</div>
+                            <div class="contacts-value tel-onclik">
+                                <a href="tel:+998901347788"
+                                    onclick="return gtag_report_conversion('tel:+998901347788');">+998 90 134 77 88</a>
+                            </div>
+                            <div class="contacts-value tel-onclik">
+                                <a href="tel:+998998909894"
+                                    onclick="return gtag_report_conversion('tel:+998998909894');">+998 99 890 98 94</a>
+                            </div>
                         </div>
                     </div>
 
@@ -637,7 +622,7 @@
                     <h2 class="contacts-title">Обратная Связь</h2>
                     <p class="contacts-subtitle">Мы Ответим На Ваши Вопросы Как Можно Скорее</p>
 
-                    <form>
+                    <form id="contactForm" onsubmit="return gtag_report_conversion();">
                         <div class="contacts-box">
                             <div class="form-group">
                                 <label class="form-label">Имя <span>*</span></label>
@@ -669,8 +654,7 @@
         </svg>
     </a>
 
-    <!-- -------------------------------------------------------FOOTER------------------------------- -->
-
+    <!-- Footer Section -->
     <footer class="footer-section">
         <div class="container">
             <div class="footer-content">
@@ -681,8 +665,7 @@
                     </div>
                     <p data-aos="fade-right" class="footer-description">
                         Клининговое компания «Partner Cleaning» уже не первый год активно предоставляет услуги по
-                        различным
-                        видам уборки жилых и коммерческих помещений и территорий.
+                        различным видам уборки жилых и коммерческих помещений и территорий.
                     </p>
                     <div class="footer-social">
                         <a target="_blank" href="https://www.instagram.com/farhod__ismailov/" data-aos="fade-up"
@@ -709,11 +692,13 @@
                                 <img src="./icons/internet.png" alt="Website">
                                 www.partner-cleaning.uz/
                             </a>
-                            <a href="tel:+998901347788" class="footer-contact-item tel-onclik">
+                            <a href="tel:+998901347788" class="footer-contact-item tel-onclik"
+                                onclick="return gtag_report_conversion('tel:+998901347788');">
                                 <img src="./icons/mobile-phone.png" alt="Phone">
                                 +998 90 134 77 88
                             </a>
-                            <a href="tel:+998998909894" class="footer-contact-item">
+                            <a href="tel:+998998909894" class="footer-contact-item tel-onclik"
+                                onclick="return gtag_report_conversion('tel:+998998909894');">
                                 <img src="./icons/mobile-phone.png" alt="Phone">
                                 +998 99 890 98 94
                             </a>
@@ -740,36 +725,35 @@
         AOS.init();
     </script>
 
-    <!-- Google tag (gtag.js) --> <amp-analytics type="gtag" data-credentials="include">
-        <script type="application/json"> { 
-            "vars": { 
-                "gtag_id": "AW-16848530076", 
-                "config": { 
-                    "AW-16848530076": { 
-                        "groups": "default" 
-                    } 
-                } 
-            }, 
-            "triggers": { 
-                "phoneCallTrigger": { 
-                    "on": "click", 
-                    "selector": ".panel-button, .tel-onclik", 
-                    "vars": { 
-                        "event_name": "conversion", 
-                        "send_to": ["AW-16848530076/9MCpCPTXt6oaEJzVgOI-"] 
-                    } 
-                },
-                "submitFormTrigger": { 
-                    "on": "click", 
-                    "selector": ".submit-button", 
-                    "vars": { 
-                        "event_name": "conversion", 
-                        "send_to": ["AW-16848530076/9MCpCPTXt6oaEJzVgOI-"] 
-                    } 
+    <!-- Google tag (gtag.js) for AMP pages -->
+    <script>
+        // Tracking phone calls and form submissions
+        document.addEventListener('DOMContentLoaded', function () {
+            // Track all elements with tel-onclik class
+            const phoneElements = document.querySelectorAll('.tel-onclik');
+            phoneElements.forEach(element => {
+                if (!element.hasAttribute('onclick')) {
+                    element.setAttribute('onclick', "return gtag_report_conversion(this.href);");
                 }
-            } 
-        } </script>
-    </amp-analytics>
+            });
+
+            // Track form submissions
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-16848530076/9MCpCPTXt6oaEJzVgOI-'
+                    });
+
+                    // Submit the form after tracking (you can add a delay if needed)
+                    setTimeout(() => {
+                        this.submit();
+                    }, 300);
+                });
+            }
+        });
+    </script>
 
     <script src="index.js"></script>
 </body>
