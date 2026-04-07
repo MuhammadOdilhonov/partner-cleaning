@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://partner-cleaning.uz/sitemap.xml
